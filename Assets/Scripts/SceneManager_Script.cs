@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneManager_Script : MonoBehaviour
 {
-    static int player;
-    public GameObject virtualGuy;
-    public GameObject pinkMan;
+    static int player; // игрок
+    public GameObject virtualGuy; // персонаж 1
+    public GameObject pinkMan; // персонаж 2
 
     public void Awake()
     {

@@ -5,7 +5,7 @@ public class Enemy_Script : MonoBehaviour
     Rigidbody2D rigidbody2D;
     SpriteRenderer spriteRenderer;
     AudioSource audioSource;
-    public GameObject danger;
+    public GameObject dangerImage; // значек опасности
 
     public Transform point; // Точка патрулирования
     private Transform player; // Игрок
@@ -33,7 +33,7 @@ public class Enemy_Script : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         speed = speedPatrol;
-        danger.SetActive(false);
+        dangerImage.SetActive(false);
         jump = false;
     }
 
@@ -63,12 +63,12 @@ public class Enemy_Script : MonoBehaviour
         }
         else if (attack)
         {
-            danger.SetActive(true);
+            dangerImage.SetActive(true);
             Attack();
         }
         else if (goBack)
         {
-            danger.SetActive(false);
+            dangerImage.SetActive(false);
             GoBack();
         }
     }

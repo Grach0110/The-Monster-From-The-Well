@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Spikes_Saw_Script : MonoBehaviour
 {
@@ -55,6 +53,5 @@ public class Spikes_Saw_Script : MonoBehaviour
                 transform.position = new Vector2(transform.position.x, transform.position.y - speed * Time.deltaTime);
             }
         }
-
     }
 }
