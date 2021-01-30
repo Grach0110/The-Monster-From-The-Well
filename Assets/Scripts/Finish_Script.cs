@@ -12,6 +12,8 @@ public class Finish_Script : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+
+        Time.timeScale = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,5 +43,7 @@ public class Finish_Script : MonoBehaviour
         timeGame.GetComponent<TimeGame_Script>().runTime = false;
         panelMenu.SetActive(true);
         textTimeGame.text = "Время игры: " + timeGame.GetComponent<TimeGame_Script>().gameTime.text;
+
+        Time.timeScale = 0;
     }
 }
